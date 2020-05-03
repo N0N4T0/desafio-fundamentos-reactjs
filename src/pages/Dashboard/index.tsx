@@ -30,12 +30,17 @@ interface Balance {
 }
 
 const Dashboard: React.FC = () => {
-  // const [transactions, setTransactions] = useState<Transaction[]>([]);
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
   // const [balance, setBalance] = useState<Balance>({} as Balance);
 
   useEffect(() => {
     async function loadTransactions(): Promise<void> {
       // TODO
+      const response = await api.get<Transaction>(`transactions`);
+
+      const transaction = response.data;
+
+      setTransactions([...transactions, transaction]);
     }
 
     loadTransactions();

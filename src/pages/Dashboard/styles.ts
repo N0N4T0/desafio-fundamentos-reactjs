@@ -55,7 +55,7 @@ export const TableContainer = styled.section`
     border-spacing: 0 8px;
 
     th {
-      color: #969cb3;
+      color: #636675;
       font-weight: normal;
       padding: 20px 32px;
       text-align: left;
@@ -69,7 +69,7 @@ export const TableContainer = styled.section`
       background: #fff;
       font-size: 16px;
       font-weight: normal;
-      color: #969cb3;
+      color: #636675;
 
       &.title {
         color: #363f5f;
